@@ -1,0 +1,32 @@
+.profile-card {
+    width: 280px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-card__info {
+    max-width: 126px;
+}
+
+.profile-card__fullname {
+    font-size: 16px;
+}
+
+.profile-card__login {
+    color: #AEAEAE;
+    font-size: 13px;
+}
+
+.profile-card__notification {
+    cursor: pointer;
+}
+
+.profile-card__image {
+    width: 80px;
+    height: 80px;
+}

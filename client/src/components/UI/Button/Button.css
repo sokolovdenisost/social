@@ -1,0 +1,51 @@
+.profile-button {
+    width: 210px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.profile-button__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.profile-button__info img {
+    padding: 5px 0;
+}
+
+.profile-button__info span {
+    color: #58E018;
+    font-size: 14px;
+}
+
+.button-ui {
+    cursor: pointer;
+    width: 200px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 37px;
+}
+
+.button-ui__body {
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-ui__left {
+    font-size: 23px;
+    color: #3d50ff;
+}
+
+.button-ui__right {
+    font-size: 14px;
+    color: #3d50ff;
+}

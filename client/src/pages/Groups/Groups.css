@@ -1,0 +1,10 @@
+.groups {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.groups-rof {
+    display: flex;
+    justify-content: space-between;
+}

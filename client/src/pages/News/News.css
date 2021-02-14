@@ -1,0 +1,12 @@
+.news-page {
+    display: flex;
+    justify-content: space-between;
+    width: 810px;
+}
+
+.news-block {
+    width: 230px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+}

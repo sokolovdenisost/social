@@ -1,0 +1,61 @@
+.profile-rof {
+    width: 810px;
+    padding: 10px;
+    position: relative;
+    background: #fff;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.profile-rof__info-image {
+    display: flex;
+}
+
+.profile-rof__image {
+    width: 150px;
+    height: 150px;
+}
+
+.profile-rof__info {
+    margin-left: 10px;
+}
+
+.profile-rof__fullname {
+    font-size: 16px;
+    color: #000;
+}
+
+.profile-rof__login {
+    font-size: 13px;
+    color: #AEAEAE;
+}
+
+.profile-rof__button {
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-body {
+    width: 790px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-right {
+    width: 210px;
+}
+
+.profile-no-post {
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}

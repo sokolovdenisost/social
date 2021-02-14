@@ -1,0 +1,79 @@
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.confirmation-overlay.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.confirmation-window {
+    width: 350px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 150px auto;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .3s ease;
+}
+
+.confirmation-window.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.confirmation-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #D8D8D8;
+    padding-bottom: 5px;
+}
+
+.confirmation-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.confirmation-close {
+    cursor: pointer;
+}
+
+.confirmation-body {
+    padding: 15px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.confirmation-footer {
+    padding-top: 5px;
+}
+
+.confirmation-button {
+    background: transparent;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background .3s ease-out;
+}
+
+.delete:hover {
+    background: #FF0000;
+    color: #fff;
+}
+
+.close:hover {
+    background: #D8D8D8;
+}

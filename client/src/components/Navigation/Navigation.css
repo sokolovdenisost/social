@@ -1,0 +1,39 @@
+.navigation {
+    width: 280px;
+    padding: 0 10px 10px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.nav-btn {
+    width: 120px;
+    background: #fff;
+    display: block;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 10px 0 0;
+    position: relative;
+    transition: background .3s ease-out;
+}
+
+.nav-btn:hover {
+    background: #F4F4F4;
+}
+
+.nav-btn img {
+    padding: 10px 0;
+    width: 35px;
+    margin: 0 42px 0 41px;
+}
+
+.nav-btn__text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    padding: 0 0 10px;
+}

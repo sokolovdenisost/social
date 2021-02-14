@@ -1,0 +1,65 @@
+.register-page {
+    position: relative;
+}
+
+.register-block {
+    margin: 150px auto;
+    width: 500px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.register-rof {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.register-body {
+    width: 200px;
+    margin: 50px auto 0;
+}
+
+.register-form {
+    width: 200px;
+}
+
+.register-form label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.register-form input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.register-in {
+    font-size: 16px;
+    font-weight: 500;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 6px 21px;
+    width: 200px;
+    cursor: pointer;
+    transition: background .4s ease-out;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.register-in:hover {
+    background: #F4F4F4;
+}
+
+.register-footer {
+    font-size: 16px;
+    width: 206px;
+    margin: 0 auto;
+}

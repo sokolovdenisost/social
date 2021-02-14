@@ -1,0 +1,9 @@
+.friends-page {
+    width: 810px;
+}
+
+.friends {
+    width: 810px;
+    display: flex;
+    flex-flow: wrap;
+}

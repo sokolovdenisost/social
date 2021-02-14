@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: #EDEEF0;
+}
+
+.container {
+    width: 1120px;
+    margin: 100px auto 0;
+    display: flex;
+}
+
+.left-side {
+    margin-right: 30px;
+}
+
+.right-side {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}

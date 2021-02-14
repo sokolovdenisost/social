@@ -1,0 +1,59 @@
+.profile-friends {
+    width: 210px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    max-height: 184px;
+}
+
+.profile-friends p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.profile-friends__rof {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d4d3d3;
+}
+
+.profile-friends__span {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.number {
+    font-weight: 400;
+    color: #323232;
+    font-size: 12px;
+}
+
+.friend-profile {
+    display: block;
+    width: 50px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.friend-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.friend-profile div {
+    font-size: 12px;
+}
+
+.profile-friends__body {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}

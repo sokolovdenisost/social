@@ -1,0 +1,24 @@
+.error-block {
+    position: absolute;
+    margin: -50px 33.5%;
+    top: 0;
+    width: 500px;
+    background: #ff7070;
+    border-radius: 10px;
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+
+.error-block.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.error-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffefef;
+    padding: 10px 15px;
+}
