@@ -1,0 +1,24 @@
+.music-page__albums {
+    width: 550px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.music-page__albums-title {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d4d3d3;
+}
+
+.music-page__albums-all {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.music-page__my {
+    margin-top: 10px;
+}

@@ -1,12 +1,13 @@
 const {Router} = require('express')
 const Group = require('../models/Group')
 const User = require('../models/User')
+const Post = require('../models/Post')
 const router = Router()
 
 router.get('/:pathname', async (req, res) => {
     const group = await Group.findOne({pathname: req.params.pathname}).populate(
-        'administrator followers.followerId',
-        'login name surname profilePhoto'
+        'administrator followers.followerId groupPosts.userCreate groupPosts.postId',
+        'login name surname profilePhoto description photos user liked'
     )
     const user = await User.findOne({_id: req.session.user._id})
 
@@ -91,6 +92,47 @@ router.post('/subscribe', async (req, res) => {
         await user.save()
 
         res.json({message: 'Подписаться'})
+    }
+})
+
+router.post('/:pathname/post', async (req, res) => {
+    const {description, photos} = await req.body
+    const group = await Group.findOne({pathname: req.params.pathname})
+    const user = await User.findOne({_id: req.session.user._id})
+
+    if (group.private.access) {
+        if (photos.length > 0) {
+            const post = new Post({
+                user,
+                description,
+                photos
+            })
+
+            group.groupPosts.push({
+                postId: post,
+                userCreate: user
+            })
+
+            await post.save()
+            await group.save()
+
+            res.json({message: 'Пост создан с картинками'})
+        } else if (photos.length === 0) {
+            const post = new Post({
+                user,
+                description
+            })
+
+            group.groupPosts.push({
+                postId: post,
+                userCreate: user
+            })
+
+            await post.save()
+            await group.save()
+
+            res.json({message: 'Пост создан без картинок'})
+        }
     }
 })
 

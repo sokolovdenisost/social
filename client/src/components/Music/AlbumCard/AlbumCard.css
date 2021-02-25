@@ -1,0 +1,30 @@
+.album-block {
+    width: 150px;
+    margin-top: 10px;
+}
+
+.album-block img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.album-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.album-name img {
+    width: 14px;
+    height: 14px;
+    margin-left: 3px;
+}
+
+.album-author {
+    font-size: 12px;
+}
+
+.album-date {
+    font-size: 12px;
+    color: #ADADAD;
+}

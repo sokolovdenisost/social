@@ -76,13 +76,14 @@ router.post('/login', async (req, res) => {
 })
 
 router.post('/register', async (req, res) => {
-    const {name, surname, login, password, email} = await req.body
+    const {name, surname, login, password, email, birthDay} = await req.body
     const user = new User({
         name,
         surname,
         login,
         password,
-        email
+        email,
+        birthDay
     })
 
     if (name && surname && login && password && email) {

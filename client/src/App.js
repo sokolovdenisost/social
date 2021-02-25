@@ -16,6 +16,7 @@ import Register from "./pages/Register/Register";
 import {Loader} from "./components/Loader/Loader";
 import {Image} from "./pages/image/Image";
 import Group from "./pages/Groups/GroupPage/Group";
+import Music from './pages/Music/Music'
 
 class App extends React.Component {
 
@@ -67,6 +68,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/image/:id" exact>
                                 <Image />
+                            </Route>
+                            <Route path="/music" exact>
+                                <Music />
                             </Route>
                             <Redirect to="/news" />
                         </Switch>

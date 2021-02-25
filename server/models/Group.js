@@ -35,8 +35,12 @@ const Group = new Schema({
     ],
     groupPosts: [
         {
+            userCreate: {
+                ref: 'User',
+                type: Schema.Types.ObjectId
+            },
             postId: {
-                ref: 'Group',
+                ref: 'Post',
                 type: Schema.Types.ObjectId
             }
         }
@@ -45,6 +49,12 @@ const Group = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true
+    },
+    private: {
+        access: {
+            type: String,
+            default: true
+        }
     }
 })
 

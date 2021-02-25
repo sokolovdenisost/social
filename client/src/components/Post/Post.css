@@ -4,6 +4,7 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .post-rof {
@@ -18,17 +19,22 @@
 
 .post-profile__image {
     margin-right: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
 }
 
 .post-profile__fullname {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .post-dots {
     cursor: pointer;
+}
+
+.post-dots:hover .post-event {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .post-body {
@@ -46,6 +52,12 @@
     height: 350px;
 }
 
+.post-footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .post-footer__like {
     width: 40px;
     display: flex;
@@ -57,4 +69,25 @@
     font-size: 12px;
     color: #6F6F6F;
     margin-left: 5px;
+}
+
+.post-footer__comment {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.post-footer__comment span {
+    font-size: 12px;
+    color: #6F6F6F;
+    margin-left: 5px;
+}
+
+.post-footer__share {
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 0;
 }

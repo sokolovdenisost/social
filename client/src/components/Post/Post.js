@@ -3,7 +3,11 @@ import './Post.css'
 
 import dots from '../../icons/dots.png'
 import like from '../../icons/like.png'
+import comment from '../../icons/comment.png'
+import repost from '../../icons/repost.png'
+
 import {localURL} from "../../const";
+import {PostEvent} from "./PostEvent/PostEvent";
 
 export const Post = (props) => {
     const likePost = () => {
@@ -28,6 +32,7 @@ export const Post = (props) => {
                 </div>
                 <div className="post-dots">
                     <img src={dots} alt=""/>
+                    <PostEvent />
                 </div>
             </div>
             <div className="post-body">
@@ -48,6 +53,12 @@ export const Post = (props) => {
                 <div className="post-footer__like" onClick={likePost}>
                     <input type="hidden" value={props.id}/>
                     <img src={like} alt=""/> <span>{props.liked.length}</span>
+                </div>
+                <div className="post-footer__comment">
+                    <img src={comment} alt=""/> <span>100</span>
+                </div>
+                <div className="post-footer__share">
+                    <img src={repost} alt=""/>
                 </div>
             </div>
         </div>

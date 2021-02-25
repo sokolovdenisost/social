@@ -1,0 +1,25 @@
+.post-event {
+    position: absolute;
+    padding: 10px 10px 7px;
+    background: #fff;
+    border: 1px solid #d4d3d3;
+    top: 35px;
+    right: 10px;
+    border-radius: 5px;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 10;
+}
+
+.post-event__item button {
+    width: 125px;
+    background: #fff;
+    border: 1px solid #eee;
+    cursor: pointer;
+    padding: 5px 0;
+    margin-bottom: 3px;
+}
+
+.post-event__item button:hover {
+    background: #eeeeee;
+}

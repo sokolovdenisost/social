@@ -10,7 +10,8 @@ export default function Register() {
         login: '',
         password: '',
         more_password: '',
-        email: ''
+        email: '',
+        birthDay: ''
     })
     const [error, setError] = useState(false)
     const [errorText, setErrorText] = useState('')
@@ -59,6 +60,8 @@ export default function Register() {
                         <input type="password" name="more_password" id="more_password" onChange={changeInputs} />
                         <label htmlFor="email">Email:</label>
                         <input type="text" name="email" id="email" onChange={changeInputs} />
+                        <label htmlFor="birthDay">Дата рождения:</label>
+                        <input type="date" name="birthDay" id="birthDay" onChange={changeInputs} />
                         <button className="register-in" onClick={register}>
                             Зарегистрироваться
                         </button>

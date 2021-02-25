@@ -15,8 +15,13 @@ import {localURL} from "../../const";
 
 export const Button = (props) => {
     return (
-        <a href={props.href} className="nav-btn" onClick={props.func}>
-            <img src={props.image} alt=""/>
+        <a
+            href={props.href}
+            className="nav-btn"
+            onClick={props.func}
+            style={{marginTop: props.margin || '10px', width: props.width || '120px'}}
+        >
+            <img src={props.image} alt="" style={{margin: props.marginAuto}}/>
             <div className="nav-btn__text">{props.title}</div>
         </a>
     )

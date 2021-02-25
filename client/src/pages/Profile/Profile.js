@@ -199,6 +199,8 @@ export class Profile extends React.Component{
                 </div>
             : null
 
+        console.log(this.state.profile)
+
         return(
             <>
                 {this.state.loading ? <Loader /> :

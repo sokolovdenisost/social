@@ -17,10 +17,10 @@ const User = new Schema({
         type: String,
         required: true
     },
-    // birthDay: {
-    //     type: Date,
-    //     required: true
-    // },
+    birthDay: {
+        type: Date,
+        required: true
+    },
     photos: [
         {
             photoId: {
@@ -83,7 +83,25 @@ const User = new Schema({
                 type: Schema.Types.ObjectId
             }
         }
-    ]
+    ],
+    privateSettings: {
+        showGroups: {
+            type: Boolean,
+            default: true
+        },
+        showFriends: {
+            type: Boolean,
+            default: true
+        },
+        showPhotos: {
+            type: Boolean,
+            default: true
+        },
+        showMusic: {
+            type: Boolean,
+            default: true
+        }
+    }
 })
 
 module.exports = model('User', User)

@@ -21,8 +21,6 @@ export const GroupsCard = ({setActive, ...props}) => {
             .catch(e => console.log(e))
     }
 
-    console.log(props)
-
     return (
         <div className="group-card">
             <a href={'/group/' + props.pathname}>

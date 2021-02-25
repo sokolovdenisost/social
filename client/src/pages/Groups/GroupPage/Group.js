@@ -11,6 +11,7 @@ import {localURL} from "../../../const";
 import {Loader} from "../../../components/Loader/Loader";
 import {GroupFollowers} from "../../../components/GroupsCard/GroupFollowers/GroupFollowers";
 import {Input} from "../../../components/UI/Input/Input";
+import {Post} from "../../../components/Post/Post";
 
 const button = [
     {
@@ -34,7 +35,8 @@ export default function Group() {
     const [ready, setReady] = useState(true)
     const [group, setGroup] = useState({})
     const [news, setNews] = useState({
-        description: ''
+        description: '',
+        photos: []
     })
     const [buttonMain, setButtonMain] = useState({
         title: '',
@@ -74,7 +76,22 @@ export default function Group() {
 
     const createPost = (e) => {
         if (e.key === 'Enter') {
-            console.log('e')
+            fetch(`${localURL}${window.location.pathname}/post`, {
+                method: "POST",
+                body: JSON.stringify({...news}),
+                headers: {
+                    "Accept": "*/*",
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(res => res.json())
+                .then(res => {
+                    if (res.message === 'Пост создан с картинками' || 'Пост создан без картинок') {
+                        window.location.reload(true)
+                    }
+                })
+
+            console.log(`${localURL}${window.location.pathname}/post`)
         }
     }
 
@@ -90,6 +107,23 @@ export default function Group() {
             .then(res => res.json())
             .catch(e => console.log(e))
     }
+
+    const mapPosts = !ready ?
+        group.groupPosts.length > 0 ?
+            group.groupPosts.map(f => {
+                return <Post
+                    id={f.postId._id}
+                    liked={f.postId.liked}
+                    user={f.userCreate}
+                    description={f.postId.description}
+                    key={f._id}
+                    photos={f.postId.photos}
+                />
+            }).reverse()
+            : <div className="group-no-post">
+                Постов пока что нету
+            </div>
+        : null
 
     return(
         <>
@@ -116,12 +150,17 @@ export default function Group() {
                                         {group.description}
                                     </div>
                                 </div>
-                                <Input
-                                    id="description"
-                                    placeholder='Добавить новость'
-                                    onChange={changeInput}
-                                    onKeyPress={createPost}
-                                />
+                                {
+                                    group.private.access ?
+                                        <Input
+                                            id="description"
+                                            placeholder='Добавить новость'
+                                            onChange={changeInput}
+                                            onKeyPress={createPost}
+                                        />
+                                        : null
+                                }
+                                {mapPosts}
                             </div>
                             <div className="group-page__right">
                                 <ProfileButton

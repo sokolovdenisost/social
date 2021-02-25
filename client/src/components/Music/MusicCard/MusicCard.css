@@ -1,0 +1,110 @@
+.music-card {
+    padding: 5px 10px;
+    background: #fff;
+    width: 550px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.music-card__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.music-card__buttons img {
+    cursor: pointer;
+}
+
+.music-img {
+    margin-left: 10px;
+}
+
+.music-card__info {
+    margin-left: 10px;
+    position: relative;
+}
+
+.music-card__info-name {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+}
+
+.music-card__info-name img {
+    margin-left: 3px;
+}
+
+.music-card__info-author {
+    font-size: 12px;
+}
+
+.music-card__info-body {
+    width: 322px;
+}
+
+.music-card__info-time {
+    top: 21px;
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    color: #ADADAD;
+}
+
+.music-card__line {
+    position: absolute;
+    bottom: 0;
+}
+
+.line-all {
+    width: 322px;
+    border: 1px solid #d4d3d3;
+}
+
+.line-noall {
+    top: 0;
+    position: absolute;
+    width: 180px;
+    border: 1px solid #000;
+}
+
+.dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border: 3px solid #000;
+    left: 178px;
+    border-radius: 100%;
+    top: -2px;
+    cursor: pointer;
+}
+
+.music-card__volume {
+    width: 40px;
+    position: relative;
+    margin: 0 10px;
+}
+
+.music-card__volume-lines {
+    width: 40px;
+    margin-top: 18px;
+}
+
+.line-all__volume {
+    width: 40px;
+    position: absolute;
+    border: 1px solid #E4E4E4;
+}
+
+.line-noall__volume {
+    position: absolute;
+    top: 18px;
+    width: 20px;
+    border: 1px solid #000;
+}
+
+.add_music {
+    cursor: pointer;
+    margin-top: 7px;
+    width: 24px;
+    height: 24px;
+}
